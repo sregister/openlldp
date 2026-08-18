@@ -929,7 +929,7 @@ static void ecp_rx_ProcessFrame(struct vdp_data *vd)
 			goto out;
 		}
 
-		if ((tlv_length == 0) && (tlv->type != TYPE_0)) {
+		if ((tlv_length == 0) && (tlv_type != TYPE_0)) {
 			LLDPAD_DBG("%s:%s tlv_length == 0\n", __func__,
 				   vd->ecp.ifname);
 			free_unpkd_tlv(tlv);
